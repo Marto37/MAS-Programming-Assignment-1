@@ -1,0 +1,6 @@
+framework module Pods_Chat_App_MAS {
+  umbrella header "Pods-Chat-App-MAS-umbrella.h"
+
+  export *
+  module * { export * }
+}
