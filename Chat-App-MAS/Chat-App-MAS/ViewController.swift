@@ -26,11 +26,19 @@ class ViewController: UIViewController {
         messagesTableView.delegate = self
         messagesTableView.dataSource = self
         
-        Message(content: "\(name) just joined the chat! It is \((temp - 273.15).truncate(places: 2))°C where they are. Sky description: \(weather)", sender: "Weather Master", timestamp: Date().timeIntervalSince1970).send()
+        if temp != 0.0 {
+            Message(content: "\(name) just joined the chat! It is \((temp - 273.15).truncate(places: 2))°C where they are. Sky description: \(weather)", sender: "Weather Master", timestamp: Date().timeIntervalSince1970).send()
+        } else {
+            Message(content: "\(name) just joined the chat! I can't tell where they are :(", sender: "Weather Master", timestamp: Date().timeIntervalSince1970).send()
+        }
         
         Message.listen { (message) in
             self.messages.append(message)
+            self.messages.sort(by: { (m1, m2) -> Bool in
+                return m1.timestamp < m2.timestamp
+            })
             self.messagesTableView.reloadData()
+            self.messagesTableView.scrollToRow(at: IndexPath(row: self.messages.count - 1, section: 0), at: .bottom, animated: true)
         }
         
         
