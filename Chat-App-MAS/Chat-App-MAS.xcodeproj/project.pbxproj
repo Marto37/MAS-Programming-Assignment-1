@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		07EAF860072FCFC57DCC0458 /* Pods_Chat_App_MAS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 827126C25D4612537771690D /* Pods_Chat_App_MAS.framework */; };
+		4CF5760124FDCAC900EE6C76 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF5760024FDCAC900EE6C76 /* Message.swift */; };
 		D1382BA424FDB6DD00247DDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1382BA324FDB6DD00247DDB /* AppDelegate.swift */; };
 		D1382BA624FDB6DD00247DDB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1382BA524FDB6DD00247DDB /* SceneDelegate.swift */; };
 		D1382BA824FDB6DD00247DDB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1382BA724FDB6DD00247DDB /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4CF5760024FDCAC900EE6C76 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		827126C25D4612537771690D /* Pods_Chat_App_MAS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chat_App_MAS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACE1E33A234B109AC2814121 /* Pods-Chat-App-MAS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat-App-MAS.release.xcconfig"; path = "Target Support Files/Pods-Chat-App-MAS/Pods-Chat-App-MAS.release.xcconfig"; sourceTree = "<group>"; };
 		D1382BA024FDB6DD00247DDB /* Chat-App-MAS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chat-App-MAS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,7 +60,6 @@
 				F2596A1DDD9279B963A1EACB /* Pods-Chat-App-MAS.debug.xcconfig */,
 				ACE1E33A234B109AC2814121 /* Pods-Chat-App-MAS.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -91,6 +92,7 @@
 				D1382BAE24FDB6DF00247DDB /* LaunchScreen.storyboard */,
 				D1382BB124FDB6DF00247DDB /* Info.plist */,
 				D1382BB724FDC31C00247DDB /* GoogleService-Info.plist */,
+				4CF5760024FDCAC900EE6C76 /* Message.swift */,
 			);
 			path = "Chat-App-MAS";
 			sourceTree = "<group>";
@@ -212,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1382BA824FDB6DD00247DDB /* ViewController.swift in Sources */,
+				4CF5760124FDCAC900EE6C76 /* Message.swift in Sources */,
 				D1382BA424FDB6DD00247DDB /* AppDelegate.swift in Sources */,
 				D1382BA624FDB6DD00247DDB /* SceneDelegate.swift in Sources */,
 			);
