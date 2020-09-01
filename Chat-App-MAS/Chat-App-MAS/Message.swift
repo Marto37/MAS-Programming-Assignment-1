@@ -25,4 +25,21 @@ extension Message {
         
         ref.child("messages").childByAutoId().setValue(value)
     }
+    
+    func fetchAllMessages() {
+        let rootRef = Database.database().reference()
+        let ref = rootRef.child("messages")
+        
+        ref.observe(.childAdded) { snapshot in
+            if let data = snapshot.value as? [String: Any],
+                let content = data["content"] as? String,
+                let timestamp = data["timestamp"] as? TimeInterval,
+                let sender = data["sender"] as? String
+
+            {
+                let message = Message(content: content, timestamp: timestamp, sender: sender)
+                handler(message)
+            }
+        }
+    }
 }
