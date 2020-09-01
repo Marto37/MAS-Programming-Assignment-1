@@ -15,9 +15,16 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var messagesTableView: UITableView!
     
+    var messages: [Message] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        let message = Message.listen { (message) in
+            messages.append(message)
+            messagesTableView.reloadData()
+        }
     }
 
     @IBAction func sendButtonWasPressed(_ sender: Any) {

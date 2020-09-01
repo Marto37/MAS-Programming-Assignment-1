@@ -15,7 +15,7 @@ struct Message {
     let timestamp: Double
 }
 
-extension Message {
+extension Message {    
     func send() {
         let ref = Database.database().reference()
         
@@ -26,7 +26,7 @@ extension Message {
         ref.child("messages").childByAutoId().setValue(value)
     }
     
-    func fetchAllMessages() {
+    static func listen(handler: @escaping (Message) -> ()) {
         let rootRef = Database.database().reference()
         let ref = rootRef.child("messages")
         
