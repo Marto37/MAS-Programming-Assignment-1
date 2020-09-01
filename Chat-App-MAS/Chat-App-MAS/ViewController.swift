@@ -15,9 +15,14 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var messagesTableView: UITableView!
     
+    var messages: [Message] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        messagesTableView.delegate = self
+        messagesTableView.dataSource = self
     }
 
     @IBAction func sendButtonWasPressed(_ sender: Any) {
@@ -33,6 +38,25 @@ class ViewController: UIViewController {
         
         Message(content: messageContent, sender: name, timestamp: timestamp).send()
     }
+}
+
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return messages.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "MessageCell") as? MessageCell else {
+            return UITableViewCell()
+        }
+        
+        cell.populateMessage(message: messages[indexPath.row])
+        
+        return cell
+    }
+    
     
 }
 
