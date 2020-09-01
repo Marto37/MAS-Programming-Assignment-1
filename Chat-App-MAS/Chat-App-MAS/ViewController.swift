@@ -16,13 +16,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var messagesTableView: UITableView!
     
     var messages: [Message] = []
+    var name: String = "Anonymous"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
         messagesTableView.delegate = self
         messagesTableView.dataSource = self
+        
+        let message = Message.listen { (message) in
+            self.messages.append(message)
+            self.messagesTableView.reloadData()
+        }
+
     }
 
     @IBAction func sendButtonWasPressed(_ sender: Any) {
@@ -31,12 +37,10 @@ class ViewController: UIViewController {
         if messageContent.count == 0 {
             return
         }
-        
-        let name = "Marcelo"
-        
+                
         let timestamp = Date().timeIntervalSince1970
         
-        Message(content: messageContent, sender: name, timestamp: timestamp).send()
+        Message(content: messageContent, sender: self.name, timestamp: timestamp).send()
     }
 }
 

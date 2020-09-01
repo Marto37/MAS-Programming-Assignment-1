@@ -15,7 +15,7 @@ struct Message {
     let timestamp: Double
 }
 
-extension Message {
+extension Message {    
     func send() {
         let ref = Database.database().reference()
         
@@ -24,5 +24,22 @@ extension Message {
                      "timestamp": self.timestamp] as [String : Any]
         
         ref.child("messages").childByAutoId().setValue(value)
+    }
+    
+    static func listen(handler: @escaping (Message) -> ()) {
+        let rootRef = Database.database().reference()
+        let ref = rootRef.child("messages")
+        
+        ref.observe(.childAdded) { snapshot in
+            if let data = snapshot.value as? [String: Any],
+                let content = data["content"] as? String,
+                let timestamp = data["timestamp"] as? TimeInterval,
+                let sender = data["sender"] as? String
+
+            {
+                let message = Message(content: content, sender: sender, timestamp: timestamp)
+                handler(message)
+            }
+        }
     }
 }
