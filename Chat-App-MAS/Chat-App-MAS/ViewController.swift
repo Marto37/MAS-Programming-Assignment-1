@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var messagesTableView: UITableView!
     
     var messages: [Message] = []
+    var name: String = "Anonymous"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,12 +37,10 @@ class ViewController: UIViewController {
         if messageContent.count == 0 {
             return
         }
-        
-        let name = "Marcelo"
-        
+                
         let timestamp = Date().timeIntervalSince1970
         
-        Message(content: messageContent, sender: name, timestamp: timestamp).send()
+        Message(content: messageContent, sender: self.name, timestamp: timestamp).send()
     }
 }
 
