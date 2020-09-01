@@ -37,7 +37,7 @@ extension Message {
                 let sender = data["sender"] as? String
 
             {
-                let message = Message(content: content, timestamp: timestamp, sender: sender)
+                let message = Message(content: content, sender: sender, timestamp: timestamp)
                 handler(message)
             }
         }

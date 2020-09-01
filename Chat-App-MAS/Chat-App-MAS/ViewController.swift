@@ -24,8 +24,8 @@ class ViewController: UIViewController {
         messagesTableView.dataSource = self
         
         let message = Message.listen { (message) in
-            messages.append(message)
-            messagesTableView.reloadData()
+            self.messages.append(message)
+            self.messagesTableView.reloadData()
         }
 
     }
