@@ -8,5 +8,7 @@ target 'Chat-App-MAS' do
   # Pods for Chat-App-MAS
   pod 'Firebase/Core'
   pod 'Firebase/Database'
-
+  pod 'Firebase/Analytics'
+  pod 'SwiftyJSON'
+  pod 'Alamofire'
 end

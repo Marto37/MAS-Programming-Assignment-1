@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     
     var messages: [Message] = []
     var name: String = "Anonymous"
+    var temp: Double = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,11 +25,14 @@ class ViewController: UIViewController {
         messagesTableView.delegate = self
         messagesTableView.dataSource = self
         
-        let message = Message.listen { (message) in
+        Message(content: "\(name) just joined the chat! It is \((temp - 273.15).truncate(places: 2))°C where they are.", sender: "Weather Master", timestamp: Date().timeIntervalSince1970).send()
+        
+        Message.listen { (message) in
             self.messages.append(message)
             self.messagesTableView.reloadData()
         }
-
+        
+        
     }
 
     @IBAction func sendButtonWasPressed(_ sender: Any) {
@@ -64,3 +68,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
 }
 
+extension Double
+{
+    func truncate(places : Int)-> Double
+    {
+        return Double(floor(pow(10.0, Double(places)) * self)/pow(10.0, Double(places)))
+    }
+}

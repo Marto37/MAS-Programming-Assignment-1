@@ -7,14 +7,31 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class HomeScreen: UIViewController {
 
     @IBOutlet weak var nameTextField: UITextField!
+    
+    var temp: Double = 0.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        AF.request("https://api.openweathermap.org/data/2.5/weather?lat=80&lon=120&appid=9c9be18e946884ad4490023ab22774d7").responseJSON { (response) in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                self.temp = json["main"]["temp"].double ?? 0.0
+                
+            case .failure(let error):
+                print("Weather fetching failed")
+                print(error.errorDescription)
+            }
+        }
     }
     
     @IBAction func goWasPressed(_ sender: Any) {
@@ -22,6 +39,7 @@ class HomeScreen: UIViewController {
         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ViewController") as? ViewController
         if let vc = vc {
             vc.name = name ?? ""
+            vc.temp = temp
             navigationController?.pushViewController(vc, animated: true)
         }
     }
