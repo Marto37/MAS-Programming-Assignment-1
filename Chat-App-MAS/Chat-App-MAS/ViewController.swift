@@ -7,14 +7,32 @@
 //
 
 import UIKit
+import Firebase
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var messageTextView: UITextField!
+    
+    @IBOutlet weak var messagesTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func sendButtonWasPressed(_ sender: Any) {
+        let messageContent = messageTextView.text ?? ""
+        
+        if messageContent.count == 0 {
+            return
+        }
+        
+        let name = "Marcelo"
+        
+        let timestamp = Date().timeIntervalSince1970
+        
+        Message(content: messageContent, sender: name, timestamp: timestamp).send()
+    }
+    
 }
 
