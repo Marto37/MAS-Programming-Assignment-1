@@ -3,4 +3,70 @@
    uuid = "CDF08C55-4A6C-467F-ACB4-D72DF9620DEC"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9D84E77B-DFAD-4080-9B36-1AEFE4742E0A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Chat-App-MAS/HomeScreen.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9D84E77B-DFAD-4080-9B36-1AEFE4742E0A - e9c36b54a4a1f915"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Chat_App_MAS.HomeScreen.viewDidLoad() -&gt; ()"
+                  moduleName = "Chat-App-MAS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/malekamiri/Documents/Georgia%20Tech/Fall%202020/Mobile%20Apps/MAS-Programming-Assignment-1/Chat-App-MAS/Chat-App-MAS/HomeScreen.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "716">
+               </Location>
+               <Location
+                  uuid = "9D84E77B-DFAD-4080-9B36-1AEFE4742E0A - a5c9e48a7a924882"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in Chat_App_MAS.HomeScreen.viewDidLoad() -&gt; ()"
+                  moduleName = "Chat-App-MAS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/malekamiri/Documents/Georgia%20Tech/Fall%202020/Mobile%20Apps/MAS-Programming-Assignment-1/Chat-App-MAS/Chat-App-MAS/HomeScreen.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "202">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2A7CE1D7-2270-403D-BBB1-7CF2EDE65AC6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Chat-App-MAS/HomeScreen.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

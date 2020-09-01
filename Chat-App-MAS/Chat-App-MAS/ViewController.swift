@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     var messages: [Message] = []
     var name: String = "Anonymous"
     var temp: Double = 0.0
+    var weather = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +26,7 @@ class ViewController: UIViewController {
         messagesTableView.delegate = self
         messagesTableView.dataSource = self
         
-        Message(content: "\(name) just joined the chat! It is \((temp - 273.15).truncate(places: 2))°C where they are.", sender: "Weather Master", timestamp: Date().timeIntervalSince1970).send()
+        Message(content: "\(name) just joined the chat! It is \((temp - 273.15).truncate(places: 2))°C where they are. Sky description: \(weather)", sender: "Weather Master", timestamp: Date().timeIntervalSince1970).send()
         
         Message.listen { (message) in
             self.messages.append(message)
