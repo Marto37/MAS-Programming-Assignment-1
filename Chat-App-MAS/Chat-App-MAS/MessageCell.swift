@@ -27,6 +27,12 @@ class MessageCell: UITableViewCell {
     }
     
     func populateMessage(message: Message) {
+        if message.sender == "Weather Master" {
+            senderLabel.textColor = .systemIndigo
+        } else {
+            senderLabel.textColor = .link
+        }
+        
         senderLabel.text = message.sender
         contentLabel.text = message.content
         
