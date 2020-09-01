@@ -20,32 +20,32 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="128" id="4Yy-dQ-HW1">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="128"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="MessageCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageCell" rowHeight="158" id="4Yy-dQ-HW1" customClass="MessageCell" customModule="Chat_App_MAS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="158"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4Yy-dQ-HW1" id="BCk-fN-MV6">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="158"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fV0-rc-gXp">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="fV0-rc-gXp">
+                                                    <rect key="frame" x="10" y="0.0" width="394" height="158"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Eoa-C7-RzZ">
-                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="42.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="394" height="42"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cPB-XB-kzP">
-                                                            <rect key="frame" x="0.0" y="42.5" width="414" height="43"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content is long so I am writing a long message to see how it looks in more than one lineee" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cPB-XB-kzP">
+                                                            <rect key="frame" x="0.0" y="42" width="394" height="83.5"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timestamp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5hc-QL-6uo">
-                                                            <rect key="frame" x="0.0" y="85.5" width="414" height="42.5"/>
+                                                            <rect key="frame" x="0.0" y="125.5" width="394" height="32.5"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                             <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
@@ -55,12 +55,17 @@
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="fV0-rc-gXp" firstAttribute="leading" secondItem="BCk-fN-MV6" secondAttribute="leading" id="NfJ-Wh-QnE"/>
-                                                <constraint firstAttribute="trailing" secondItem="fV0-rc-gXp" secondAttribute="trailing" id="Sit-d7-Qgw"/>
+                                                <constraint firstItem="fV0-rc-gXp" firstAttribute="leading" secondItem="BCk-fN-MV6" secondAttribute="leading" constant="10" id="NfJ-Wh-QnE"/>
+                                                <constraint firstAttribute="trailing" secondItem="fV0-rc-gXp" secondAttribute="trailing" constant="10" id="Sit-d7-Qgw"/>
                                                 <constraint firstItem="fV0-rc-gXp" firstAttribute="top" secondItem="BCk-fN-MV6" secondAttribute="top" id="uan-K4-5fp"/>
                                                 <constraint firstAttribute="bottom" secondItem="fV0-rc-gXp" secondAttribute="bottom" id="yGT-p1-h5z"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="contentLabel" destination="cPB-XB-kzP" id="W8X-0N-yL1"/>
+                                            <outlet property="senderLabel" destination="Eoa-C7-RzZ" id="Wf2-wt-jM4"/>
+                                            <outlet property="timestampLabel" destination="5hc-QL-6uo" id="WuJ-iy-cXc"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
