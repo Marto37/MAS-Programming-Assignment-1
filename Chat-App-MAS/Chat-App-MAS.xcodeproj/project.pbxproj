@@ -16,6 +16,7 @@
 		D1382BAD24FDB6DF00247DDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1382BAC24FDB6DF00247DDB /* Assets.xcassets */; };
 		D1382BB024FDB6DF00247DDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1382BAE24FDB6DF00247DDB /* LaunchScreen.storyboard */; };
 		D1382BB824FDC31C00247DDB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D1382BB724FDC31C00247DDB /* GoogleService-Info.plist */; };
+		D1382BBA24FEB4A400247DDB /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1382BB924FEB4A400247DDB /* MessageCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		D1382BAF24FDB6DF00247DDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1382BB124FDB6DF00247DDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1382BB724FDC31C00247DDB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D1382BB924FEB4A400247DDB /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		F2596A1DDD9279B963A1EACB /* Pods-Chat-App-MAS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat-App-MAS.debug.xcconfig"; path = "Target Support Files/Pods-Chat-App-MAS/Pods-Chat-App-MAS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +95,7 @@
 				D1382BB124FDB6DF00247DDB /* Info.plist */,
 				D1382BB724FDC31C00247DDB /* GoogleService-Info.plist */,
 				4CF5760024FDCAC900EE6C76 /* Message.swift */,
+				D1382BB924FEB4A400247DDB /* MessageCell.swift */,
 			);
 			path = "Chat-App-MAS";
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1382BA824FDB6DD00247DDB /* ViewController.swift in Sources */,
+				D1382BBA24FEB4A400247DDB /* MessageCell.swift in Sources */,
 				4CF5760124FDCAC900EE6C76 /* Message.swift in Sources */,
 				D1382BA424FDB6DD00247DDB /* AppDelegate.swift in Sources */,
 				D1382BA624FDB6DD00247DDB /* SceneDelegate.swift in Sources */,
